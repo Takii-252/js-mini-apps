@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>電卓アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =============================================
+       結果表示エリア
+       ============================================= -->
+  <div id="display">0</div>
+  <!-- 
+    <div> とは：
+    - 「Division（区画）」の略
+    - 要素をグループ化するための「箱」
+    - それ自体は見た目を持たない（CSSで装飾する）
+    
+    id="display" とは：
+    - この箱に「display」という名前をつけている
+    - JavaScriptから getElementById("display") で取得できる
+  -->
+
+
+  <!-- =============================================
+       電卓のボタン配置
+       ============================================= -->
+  <div class="buttons">
+  <!-- 
+    class="buttons" とは：
+    - この箱に「buttons」というグループ名をつけている
+    - CSSで .buttons { ... } と書くとスタイルを適用できる
+    - この中にあるボタンをまとめて配置するための箱
+    
+    【id と class の違い】
+    - id：1つだけ（名札）→ 例：#display
+    - class：複数OK（グループ名）→ 例：.buttons, .number
+  -->
+
+    <!-- 数字ボタン（7, 8, 9 と 割り算） -->
+    <button class="number">7</button>
+    <button class="number">8</button>
+    <button class="number">9</button>
+    <button class="operator">/</button>
+    <!-- 
+      class="number" とは：
+      - 数字ボタンすべてに同じクラス名をつけている
+      - CSSで .number { ... } と書くと、全数字ボタンに同じスタイル適用
+      - JavaScriptで document.querySelectorAll(".number") で全部取得可能
+    -->
+
+    <!-- 数字ボタン（4, 5, 6 と 掛け算） -->
+    <button class="number">4</button>
+    <button class="number">5</button>
+    <button class="number">6</button>
+    <button class="operator">*</button>
+
+    <!-- 数字ボタン（1, 2, 3 と 引き算） -->
+    <button class="number">1</button>
+    <button class="number">2</button>
+    <button class="number">3</button>
+    <button class="operator">-</button>
+
+    <!-- 0, クリア, イコール, 足し算 -->
+    <button class="number">0</button>
+    <button id="clear">C</button>
+    <button id="equals">=</button>
+    <button class="operator">+</button>
+    <!-- 
+      id="clear" と id="equals" とは：
+      - クリアとイコールは特別な処理をするので id で区別
+      - JavaScriptで getElementById("clear") で個別に取得
+    -->
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
