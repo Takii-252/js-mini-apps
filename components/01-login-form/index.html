@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログインフォーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+  <!-- 
+    <div> = 要素をグループ化する「箱」
+    class="login-container" = CSSでまとめてスタイルを適用するため
+    電卓アプリの .buttons と同じ考え方
+  -->
+
+    <h1>ログイン</h1>
+
+    <form id="login-form">
+    <!-- 
+      <form> = フォーム（入力欄の集まり）を作るタグ
+      フォームを作るときは基本的にこのタグを使う
+      id="login-form" = JavaScriptから操作するための名札
+    -->
+      
+      <!-- ===== メールアドレス入力 ===== -->
+      <div class="form-group">
+        
+        <label for="email">メールアドレス</label>
+        <!-- 
+          <label> = 入力欄の説明文（ラベル）
+          for="email" = どの入力欄のラベルかを指定
+          → id="email" の入力欄と紐づく
+          → ラベルをクリックすると入力欄にフォーカスが当たる
+        -->
+        
+        <input type="email" id="email" placeholder="example@mail.com" required>
+        <!-- 
+          <input> = 入力欄を作るタグ
+          
+          【新しい属性】
+          type="email" → メール形式かチェック（@がないとエラー）
+          id="email" → label の for と紐づく & JSから操作用
+          placeholder="..." → 薄いヒント文字（入力すると消える）
+          required → 入力必須（空のまま送信しようとするとエラー）
+        -->
+      </div>
+
+      <!-- ===== パスワード入力 ===== -->
+      <div class="form-group">
+        
+        <label for="password">パスワード</label>
+        
+        <input type="password" id="password" placeholder="パスワード" required>
+        <!-- 
+          type="password" → 入力が ●●● で自動的に隠される
+          これはHTMLの標準機能。特別な設定は不要！
+        -->
+      </div>
+
+      <!-- ===== ログインボタン ===== -->
+      <button type="submit">ログイン</button>
+      <!-- 
+        type="submit" = フォームを送信するボタン
+        クリックすると form の submit イベントが発火
+      -->
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

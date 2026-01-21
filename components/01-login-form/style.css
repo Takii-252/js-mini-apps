@@ -1,0 +1,143 @@
+/* ===================================
+   ログインフォーム - スタイル
+   =================================== */
+
+/* ----- ページ全体 ----- */
+body {
+  background-color: #1a1a2e;
+  /* ↑ 暗い青紫の背景 */
+  
+  font-family: 'Arial', sans-serif;
+  
+  display: flex;
+  /* ↑ Flexbox（フレックスボックス）を有効化
+     子要素（.login-container）を柔軟に配置できるモードに切り替え */
+  
+  justify-content: center;
+  /* ↑ 子要素を「横方向」に中央配置 */
+  
+  align-items: center;
+  /* ↑ 子要素を「縦方向」に中央配置
+     
+     【display: flex + justify-content: center + align-items: center】
+     → 子要素を画面の「ど真ん中」に配置するテクニック
+     → よく使うパターンなので覚えておくと便利！ */
+  
+  min-height: 100vh;
+  /* ↑ 100vh = 画面の高さ100%（Viewport Height）
+     最低でも画面いっぱいの高さを確保する
+     
+     これがないと bodyの高さが「中身の高さだけ」になり、
+     縦方向の中央配置（align-items: center）が効かない */
+  
+  margin: 0;
+}
+
+/* ----- ログインコンテナ（青い箱） ----- */
+.login-container {
+  /* ↑ 画像で見える「青い箱」がこれ
+     
+     構造イメージ:
+     画面全体（body）
+     └── 青い箱（.login-container）← ★ここ
+         ├── タイトル（h1）
+         ├── メールアドレス入力（.form-group）
+         └── パスワード入力（.form-group）
+  */
+  
+  background-color: #16213e;
+  padding: 40px;
+  border-radius: 10px;
+  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* ↑ 影をつけて浮き上がって見える効果
+     box-shadow: 横のずれ 縦のずれ ぼかし 色 */
+  
+  width: 300px;
+}
+
+/* ----- タイトル ----- */
+h1 {
+  /* ↑ タイトルは .login-container の中にあるので、
+     その箱の中で表示される
+     位置はHTMLに書いた順番で「上から順に配置」される */
+  
+  color: #e94560;
+  text-align: center;
+  /* ↑ 文字を中央揃え */
+  margin-bottom: 30px;
+}
+
+/* ----- フォームグループ（ラベル＋入力欄のセット） ----- */
+.form-group {
+  /* ↑ 「ラベル + 入力欄」を1つのグループとしてまとめたもの
+     
+     HTML構造:
+     <div class="form-group">
+       <label>メールアドレス</label>
+       <input type="email">
+     </div>
+     
+     位置はHTMLに書いた順番で「上から順に配置」される */
+  
+  margin-bottom: 20px;
+  /* ↑ 各入力欄の間隔 */
+}
+
+/* ----- ラベル ----- */
+label {
+  display: block;
+  /* ↑ ラベルを1行占有させる（入力欄が下に来る） */
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ----- 入力欄 ----- */
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f3460;
+  color: #fff;
+  font-size: 14px;
+  
+  box-sizing: border-box;
+  /* ↑ width計算にpaddingを含める
+     これがないと width: 100% + padding で
+     親要素からはみ出てしまう */
+}
+
+/* ----- プレースホルダー（薄いヒント文字） ----- */
+input::placeholder {
+  color: #888;
+  /* ↑ ::placeholder = プレースホルダーのスタイル */
+}
+
+/* ----- 入力欄にフォーカス時 ----- */
+input:focus {
+  outline: 2px solid #e94560;
+  /* ↑ :focus = 入力欄がクリックされた時
+     ピンクの枠線でハイライト */
+}
+
+/* ----- ボタン ----- */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e94560;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ----- ボタンにマウスを乗せた時 ----- */
+button:hover {
+  background-color: #ff6b6b;
+  /* ↑ :hover = マウスを乗せた時
+     少し明るいピンクに変化 */
+}
