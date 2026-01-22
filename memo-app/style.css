@@ -1,0 +1,161 @@
+/* ===================================
+   メモアプリ - スタイル
+   =================================== */
+
+/* ----- ページ全体 ----- */
+body {
+  background: linear-gradient(135deg, #a7e68a 0%, #26d3b6 100%);
+  /* ↑ linear-gradient = グラデーション（色の移り変わり）
+       135deg = 斜め方向（左上から右下へ）
+       #a7e68a 0% = 開始色（明るい緑）
+       #26d3b6 100% = 終了色（ティール/青緑） */
+  
+  font-family: 'Arial', sans-serif;
+  /* ↑ フォントを指定 */
+  
+  display: flex;
+  /* ↑ Flexboxを有効化（子要素を柔軟に配置） */
+  
+  justify-content: center;
+  /* ↑ 子要素を横方向に中央配置 */
+  
+  align-items: center;
+  /* ↑ 子要素を縦方向に中央配置 */
+  
+  min-height: 100vh;
+  /* ↑ 最低でも画面の高さ100%を確保
+       これがないと縦方向の中央配置が効かない */
+  
+  margin: 0;
+  /* ↑ ブラウザのデフォルト余白を消す */
+}
+
+/* ----- メモコンテナ（白い箱） ----- */
+.memo-container {
+  background-color: rgb(17, 16, 16);
+  /* ↑ 背景色を暗いグレー（ダークモード風） */
+  
+  padding: 30px;
+  /* ↑ 内側の余白（箱と中身の間） */
+  
+  border-radius: 15px;
+  /* ↑ 角を丸くする */
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* ↑ 影をつけて浮き上がって見える効果
+       box-shadow: 横 縦 ぼかし 色 */
+  
+  width: 400px;
+  /* ↑ 箱の幅を400pxに固定 */
+}
+
+/* ----- タイトル ----- */
+h1 {
+  text-align: center;
+  /* ↑ 文字を中央揃え */
+  
+  color: #f0eeee;
+  /* ↑ 文字色を薄いグレー（暗い背景に合わせて明るく） */
+  
+  margin-bottom: 20px;
+  /* ↑ 下に余白を追加 */
+}
+
+/* ----- 入力エリア ----- */
+.input-area {
+  display: flex;
+  /* ↑ 入力欄とボタンを横並びにする */
+  
+  gap: 10px;
+  /* ↑ 要素間の隙間 */
+  
+  margin-bottom: 20px;
+  /* ↑ 下に余白を追加 */
+}
+
+/* ----- 入力欄 ----- */
+#memo-input {
+  flex: 1;
+  /* ↑ 残りのスペースをすべて使う（ボタンの分を除いて） */
+  
+  padding: 12px;
+  /* ↑ 内側の余白 */
+  
+  border: 2px solid #ddd;
+  /* ↑ 枠線（薄いグレー） */
+  
+  border-radius: 8px;
+  /* ↑ 角を丸くする */
+  
+  font-size: 16px;
+  /* ↑ 文字サイズ */
+}
+
+#memo-input:focus {
+  /* ↑ :focus = 入力欄がクリックされてフォーカスされた時 */
+  
+  outline: none;
+  /* ↑ ブラウザのデフォルト枠線を消す */
+  
+  border-color: #667eea;
+  /* ↑ 枠線の色を紫に変更（ハイライト効果） */
+}
+
+/* ----- 追加ボタン ----- */
+#add-btn {
+  background-color: #667eea;
+  /* ↑ ボタンの背景色（紫） */
+  
+  color: white;
+  /* ↑ 文字色を白に */
+  
+  border: none;
+  /* ↑ 枠線を消す */
+  
+  padding: 12px 24px;
+  /* ↑ 内側の余白（上下12px、左右24px） */
+  
+  border-radius: 8px;
+  /* ↑ 角を丸くする */
+  
+  font-size: 16px;
+  /* ↑ 文字サイズ */
+  
+  cursor: pointer;
+  /* ↑ マウスを乗せると手の形になる */
+}
+
+#add-btn:hover {
+  /* ↑ :hover = マウスを乗せた時 */
+  
+  opacity: 0.9;
+  /* ↑ 少し透明にする（押せる感を演出） */
+}
+
+/* ----- メモリスト ----- */
+#memo-list {
+  list-style: none;
+  /* ↑ リストの「・」マークを消す */
+  
+  padding: 0;
+  margin: 0;
+  /* ↑ ブラウザのデフォルト余白を消す */
+}
+
+/* ----- メモ1つ分 ----- */
+/* ↑ #memo-list li とは？
+     HTMLには <ul id="memo-list"></ul> だけがあり、中身は空。
+     JavaScriptでメモを追加すると <li> が動的に作られる。
+     その <li> に適用されるスタイルをここで定義している。 */
+#memo-list li {
+  padding: 15px;
+  /* ↑ 内側の余白 */
+  
+  border-radius: 8px;
+  /* ↑ 角を丸くする */
+  
+  margin-bottom: 10px;
+  /* ↑ メモ同士の間隔 */
+  
+  /* 背景色はJSでランダムに設定される */
+}
