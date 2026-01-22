@@ -1,0 +1,68 @@
+/* ===================================
+   選択肢ボタン - スタイル
+   =================================== */
+
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  /* ↑ ダークな背景（ゲーム風） */
+  
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ----- ポップアップ ----- */
+.popup {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* ↑ 半透明の白（ガラス風） */
+  
+  backdrop-filter: blur(10px);
+  /* ↑ 背景をぼかす（ガラス効果） */
+  
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* ----- 選択肢エリア ----- */
+.choices {
+  display: flex;
+  gap: 20px;
+  /* ↑ ボタン同士の間隔 */
+}
+
+/* ----- 選択肢ボタン ----- */
+.choice-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  
+  /* ★ホバー拡大のためのアニメーション準備★ */
+  transition: transform 0.2s ease;
+  /* ↑ 変化を滑らかにする（0.2秒かけて変化） */
+}
+
+/* ★マウスを乗せた時：拡大★ */
+.choice-btn:hover {
+  transform: scale(1.1);
+  /* ↑ 1.1倍に拡大（ユーザーの設計通り！） */
+}
+
+/* ★選択済み状態★ */
+.choice-btn.selected {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  /* ↑ 赤に変更（選択済みを示す） */
+}
