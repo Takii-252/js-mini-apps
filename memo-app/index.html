@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>メモアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- ↑ ここまでは全アプリ共通の基本構造 -->
+
+<body>
+
+  <div class="memo-container">
+  <!-- ↑ 全体を囲む箱（いつも通り） -->
+
+    <h1>📝 メモ一覧</h1>
+    <!-- ===== 入力エリア ===== -->
+    <div class="input-area">
+    <!-- ↑ 入力欄とボタンを囲む箱 -->
+      
+      <input type="text" id="memo-input" placeholder="新しいメモを入力...">
+      <!-- ↑ テキスト入力欄
+           type="text" → 普通のテキスト入力
+           id="task-input" → JSから操作するための名札
+           placeholder → 薄いヒント文字 -->
+
+      <button id="add-btn">追加</button>
+      <!-- ↑ 追加ボタン
+           id="add-btn" → JSからクリックイベントを設定するため -->
+    </div>
+    <!-- ===== メモ一覧 ===== -->
+    <ul id="memo-list">
+    <!-- ↑ <ul> = 箇条書きリスト（Unordered List）
+         id="task-list" → JSからこの要素を操作するための名札
+         
+         【重要】ここは空っぽ！
+         HTMLには何も書かない。
+         JavaScriptで動的に <li> を追加していく。
+         
+         追加後のイメージ:
+         <ul id="task-list">
+           <li>タスク1</li>
+           <li>タスク2</li>
+           <li>タスク3</li>
+         </ul>
+    -->
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
