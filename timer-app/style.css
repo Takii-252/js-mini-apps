@@ -1,0 +1,116 @@
+/* ===================================
+   タイマーアプリ - スタイル
+   =================================== */
+
+/* ----- ページ全体 ----- */
+body {
+  background: linear-gradient(135deg, #d8819b 0%, #83393f 100%);
+  /* ↑ linear-gradient = グラデーション（色の移り変わり）*/
+
+  font-family: 'Arial', sans-serif;
+  /* ↑ フォントを指定 */
+  
+  display: flex;
+  /* ↑ Flexboxを有効化（子要素を柔軟に配置） */
+  
+  justify-content: center;
+  /* ↑ 子要素を横方向に中央配置 */
+  
+  align-items: center;
+  /* ↑ 子要素を縦方向に中央配置 */
+  
+  min-height: 100vh;
+  /* ↑ 最低でも画面の高さ100%を確保
+       これがないと縦方向の中央配置が効かない */
+  
+  margin: 0;
+  /* ↑ ブラウザのデフォルト余白を消す */
+}
+
+/* ----- メモコンテナ（白い箱） ----- */
+.timer-container {
+  background-color: rgb(243, 239, 239);
+  
+  padding: 30px;
+  /* ↑ 内側の余白（箱と中身の間） */
+  
+  border-radius: 15px;
+  /* ↑ 角を丸くする */
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* ↑ 影をつけて浮き上がって見える効果
+       box-shadow: 横 縦 ぼかし 色 */
+  
+  width: 400px;
+  /* ↑ 箱の幅を400pxに固定 */
+}
+
+/* ----- タイトル ----- */
+h1 {
+  text-align: center;
+  /* ↑ 文字を中央揃え */
+  
+  color: #e00d65;
+  /* ↑ 文字色を薄いグレー（暗い背景に合わせて明るく） */
+  
+  margin-bottom: 20px;
+  /* ↑ 下に余白を追加 */
+}
+
+/* ----- 入力エリア ----- */
+.input-area {
+  display: flex;
+  /* ↑ 入力欄とボタンを横並びにする */
+  
+  gap: 30px;
+  /* ↑ 要素間の隙間 */
+  
+  margin-bottom: 20px;
+  /* ↑ 下に余白を追加 */
+}
+
+
+/* ----- ボタン共通 ----- */
+button {
+  background-color: #0c0008;
+  /* ↑ ボタンの背景色（紫） */
+  
+  color: white;
+  /* ↑ 文字色を白に */
+  
+  border: none;
+  /* ↑ 枠線を消す */
+  
+  padding: 12px 24px;
+  /* ↑ 内側の余白（上下12px、左右24px） */
+  
+  border-radius: 8px;
+  /* ↑ 角を丸くする */
+  
+  font-size: 16px;
+  /* ↑ 文字サイズ */
+  
+  cursor: pointer;
+  /* ↑ マウスを乗せると手の形になる */
+}
+
+
+/* ----- 時間表示 ----- */
+#time-display {
+  font-size: 72px;
+  /* ↑ 大きな文字サイズ */
+  
+  font-weight: bold;
+  /* ↑ 太字 */
+  
+  text-align: center;
+  /* ↑ 中央揃え */
+  
+  color: #333;
+  /* ↑ 文字色 */
+  
+  margin: 30px 0;
+  /* ↑ 上下に余白 */
+}
+
+

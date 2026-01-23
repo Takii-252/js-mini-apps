@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイマーアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- ↑ ここまでは全アプリ共通の基本構造 -->
+
+<body>
+
+  <div class="timer-container">
+  <!-- ↑ 全体を囲む箱（いつも通り）-->
+
+    <h1>📝 タイマーアプリ</h1>
+
+    <div id="time-display">20:00</div>
+    
+    <!-- ===== 入力エリア ===== -->
+    <div class="input-area">
+
+
+    <!-- ↑ ボタンを囲む箱 -->
+
+      <button id="start-btn">スタート</button>
+      <!-- ↑ スタートボタン -->
+
+      <button id="stop-btn">ストップ</button>
+      <!-- ↑ ストップボタン -->
+
+      <button id="reset-btn">リセット</button>
+      <!-- ↑ 追加ボタン
+           id="add-btn" → JSからクリックイベントを設定するため -->
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
