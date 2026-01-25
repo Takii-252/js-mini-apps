@@ -1,0 +1,76 @@
+/* ===================================
+   ハート評価 - スタイル
+   =================================== */
+
+body {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.rating-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ----- ハートエリア ----- */
+.hearts {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ----- ハート1つ ----- */
+.heart {
+  font-size: 48px;
+  color: #ddd;
+  /* ↑ デフォルトはグレー */
+  
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  /* ↑ 色と大きさの変化を滑らかに */
+}
+
+.heart:hover {
+  transform: scale(1.2);
+  /* ↑ ホバーで拡大 */
+}
+
+/* ----- 塗りつぶし状態 ----- */
+.heart.filled {
+  color: #ff6b6b;
+  /* ↑ 赤いハート */
+}
+
+/* ----- 半分塗りつぶし（CSS gradient） ----- */
+.heart.half {
+  background: linear-gradient(90deg, #ff6b6b 50%, #ddd 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* ↑ テキストにグラデーションを適用して半分だけ色をつける */
+}
+
+/* ----- 評価テキスト ----- */
+.rating-text {
+  font-size: 18px;
+  color: #666;
+}
+
+#rating-value {
+  font-weight: bold;
+  color: #ff6b6b;
+}
