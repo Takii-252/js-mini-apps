@@ -1,0 +1,86 @@
+/* 背景色など */
+body {
+  background: linear-gradient(135deg, #fcffd2 0%, #e8fc9f 100%);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 白い箱 */
+.janken-container {
+  background-color: rgb(224, 40, 40);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ----- 得点表示プレイヤー＆コンピューター ----- */
+#player-tokuten,#computer-tokuten {
+  font-size: 30px;
+  /* ↑ 大きな文字サイズ */
+  
+  font-weight: bold;
+  /* ↑ 太字 */
+  
+  text-align: center;
+  /* ↑ 中央揃え */
+  
+  color: #333;
+  /* ↑ 文字色 */
+  
+  margin: 30px 0;
+  /* ↑ 上下に余白 */
+}
+
+/* ----- ボタン共通 ----- */
+button {
+  background-color: #17e46c;
+  /* ↑ ボタンの背景色（紫） */
+  
+  color: white;
+  /* ↑ 文字色を白に */
+  
+  border: none;
+  /* ↑ 枠線を消す */
+  
+  padding: 12px 24px;
+  /* ↑ 内側の余白（上下12px、左右24px） */
+  
+  border-radius: 8px;
+  /* ↑ 角を丸くする */
+  
+  font-size: 16px;
+  /* ↑ 文字サイズ */
+  
+  cursor: pointer;
+  /* ↑ マウスを乗せると手の形になる */
+}
+
+
+/* ----- 結果表示 ----- */
+#kekka {
+  font-size: 72px;
+  /* ↑ 大きな文字サイズ */
+  
+  font-weight: bold;
+  /* ↑ 太字 */
+  
+  text-align: center;
+  /* ↑ 中央揃え */
+  
+  color: #333;
+  /* ↑ 文字色 */
+  
+  margin: 30px 0;
+  /* ↑ 上下に余白 */
+}
