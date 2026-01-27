@@ -1,0 +1,90 @@
+/* ===================================
+   原稿用紙カウンター - CSS
+   ===================================
+   
+   【レイヤー構造】
+   body（ページ全体の青いグラデーション背景）
+   └── gennkou-container（中央の黒いカード）
+       ├── h1（タイトル）
+       ├── input-area（見えない箱 = レイアウト用）
+       │   ├── textarea（白い入力欄）
+       │   └── button（数えるボタン）
+       └── kekka（結果表示エリア）
+   
+   ※ input-area は背景色がないので見えないが、
+     textareaとbuttonを縦並びにするために使用
+   =================================== */
+
+/* ----- ページ全体の背景 ----- */
+body {
+  background: linear-gradient(135deg, #dbdbd1 0%, #abc9f7 100%);
+  /* ↑ ページ全体の背景（青いグラデーション） */
+  
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ----- 中央の黒いカード ----- */
+.gennkou-container {
+  background-color: rgb(32, 29, 29);
+  /* ↑ このカードの背景色（黒） */
+  
+  padding: 40px;
+  /* ↑ カードの内側の余白 */
+  
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- タイトル ----- */
+h1 {
+  color: #ebe5e5;
+  margin-bottom: 20px;
+}
+
+/* ----- テキストエリア（入力欄） ----- */
+#nyuuryoku {
+  width: 600px;
+  height: 400px;
+}
+
+/* ----- 入力エリア（見えない箱 = レイアウト用） ----- */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  /* ↑ 子要素（textareaとbutton）を縦並びにする */
+  
+  align-items: center;
+  /* ↑ 中央揃え */
+  
+  gap: 20px;
+  /* ↑ 子要素間に20pxの隙間を作る */
+}
+
+/* ----- ボタン ----- */
+button {
+  background-color: #82bee5;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  /* ↑ padding = 内側の余白（ボタンを大きく見せる） */
+  
+  border-radius: 8px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* ----- 結果表示エリア ----- */
+#kekka {
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 30px 0;
+  /* ↑ margin = 外側の余白（他の要素との隙間） */
+}
