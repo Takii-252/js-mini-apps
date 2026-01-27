@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>モーダル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>モーダルの例</h1>
+    
+    <button id="open-btn">モーダルを開く</button>
+  </div>
+
+  <!-- ===== モーダル（最初は非表示） ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <h2>確認</h2>
+      <p>本当に削除しますか？</p>
+      
+      <div class="modal-buttons">
+        <button id="cancel-btn">キャンセル</button>
+        <button id="ok-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
